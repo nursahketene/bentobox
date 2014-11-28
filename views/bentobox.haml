@@ -1,0 +1,33 @@
+.test_container
+  .left_container
+    .info
+      Drag Items Where They Belong To
+    .questions_container
+      %ol.simple_with_drop{data: {type: "Questions"}}
+        - @items.each do |i|
+          %li{ data: {type: "#{i[:type]}"}, class: "item #{cycle('red', 'blue', 'green', 'orange', 'purple')}"}
+            = i[:name]
+            %span.helper{data: {type: "#{i[:description]}"}}
+              %img.helper_icon{src: "images/question_mark.png"}
+  .right_container
+    .box_container
+      .left_box
+        .storage_box
+          %h2.dark_text
+            Storage
+          %ol.simple_with_no_drag{data: {type: "Storage"}}
+        .infrastructure_box
+          %h2.dark_text
+            Infrastructure
+          %ol.simple_with_no_drag{data: {type: "Infrastructure"}}
+
+      .right_box
+        .logic_box
+          %h2
+            Logic
+          %ol.simple_with_no_drag{data: {type: "Logic"}}
+
+        .style_box
+          %h2
+            Style
+          %ol.simple_with_no_drag{data: {type: "Style"}}

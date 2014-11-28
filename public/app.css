@@ -1,0 +1,184 @@
+body{
+  margin:0;
+  font:13px/1.5 'Helvetica Neue',Arial,'Liberation Sans',FreeSans,sans-serif;
+  color: white;
+}
+
+.helper_text{
+  position: absolute;
+  margin: auto;
+  padding-top:20px;
+  padding-bottom: 20px;
+  z-index: 10;
+  background-color: #FF6666;
+  text-align: center;
+  color: white;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 50%;
+  height: 50%;
+
+}
+
+body.dragging, body.dragging * {
+  cursor: move !important;
+}
+
+.main_container{
+  height: 100vh;
+}
+
+h2{
+  margin-top: 0;
+  padding-top: 2vh;
+  padding-left: 2vw;
+  margin-bottom: 0;
+}
+
+.dark_text{
+  color: #009BC7;
+}
+
+.red{
+  background-color: #FF3333;
+}
+
+.blue{
+  background-color: #2AB1D0;
+}
+
+.green{
+  background-color: #32BD26;
+}
+
+.orange{
+  background-color: #FF8133;
+}
+
+.purple{
+  background-color: #7A24B4;
+}
+
+.test_container{
+  width: 100%;
+  height: 100vh;
+}
+
+.left_container{
+  width: 20vw;
+  height: 100vh;
+  float: left;
+}
+
+.right_container{
+  width: 80vw;
+  height: 100vh;
+  float: left;
+}
+
+ol{
+  list-style-type: none;
+  margin:0;
+  padding-left:0;
+  min-height: 83%;
+
+}
+
+.info{
+  background-color: white;
+  text-align: center;
+  color: #009BCA;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.questions_container{
+  width: 20vw;
+  height: 80%;
+  overflow: auto;
+  background-color: white;
+}
+
+.item{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  width: 15vw;
+  text-align: center;
+  cursor: move;
+}
+
+.helper_icon{
+  height: 20px;
+  float: right;
+  cursor: pointer;
+ }
+
+.box_container{
+  background-color: #DBDBDB;
+  width: 80vw;
+  height: 100vh;
+}
+
+
+.left_box{
+  width: 35vw;
+  max-height: 100vh;
+  background-color: #58595B;
+  overflow: scroll;
+  float:left;
+}
+
+.right_box{
+  width: 45vw;
+  height: 100vh;
+  background-color: #93EEF7;
+  float:left;
+}
+
+.storage_box{
+  width: 100%;
+  height: 50vh;
+  background-color: #F6F6F6;
+}
+
+.box{
+  background-color: #00C028;
+}
+
+.sorted_item{
+  color:white;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  width: 5vw;
+  font-size: 9px;
+  text-align: center;
+
+}
+
+.infrastructure_box{
+  width: 100%;
+  height: 50vh;
+  background-color:#DBDBDB;
+}
+
+.logic_box{
+  width: 100%;
+  height: 40vh;
+  background-color: #339BC4;
+}
+
+.style_box{
+  width: 100%;
+  height: 60vh;
+  background-color: #0076B6;
+}
