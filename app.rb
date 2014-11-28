@@ -1,6 +1,3 @@
-require 'rubygems'
-require "sinatra"
-require 'Haml'
 require_relative "helpers"
 
 get "/" do

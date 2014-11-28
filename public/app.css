@@ -64,13 +64,13 @@ h2{
 }
 
 .left_container{
-  width: 20vw;
+  width: 20%;
   height: 100vh;
   float: left;
 }
 
 .right_container{
-  width: 80vw;
+  width: 80%;
   height: 100vh;
   float: left;
 }
@@ -128,7 +128,6 @@ ol{
   width: 35vw;
   max-height: 100vh;
   background-color: #58595B;
-  overflow: scroll;
   float:left;
 }
 
