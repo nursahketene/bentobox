@@ -74,6 +74,11 @@ $(document).ready(function() {
     if (num_el == 0){
       var helper_text = "Congradulations, You have finished this test. If you want to take test again just refresh the page. If you want to stay in the page just click 'Got It!'";
       $(".helper_text").css("background-color", " #90C590");
+      $(".left_container").hide();
+      $(".right_container").css("width", "100vw");
+      $(".box_container").css("width", "100vw");
+      $(".left_box").css("width", "45vw");
+      $(".right_box").css("width", "55vw");
       show_description(helper_text);
     };
   };
