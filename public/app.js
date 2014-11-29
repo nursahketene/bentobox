@@ -1,22 +1,20 @@
 $(document).ready(function() {
   var right_place_animation, wrong_place_animation, show_description;
 
-  $(document).click(function(){
-    var check_helper_text = $("body").find(".helper_text");
-    check_length = check_helper_text.length;
-    if(check_length > 0){
-      
-      //remove_description();
-    }else{
-    }
+  $(document).keyup(function(e){
+    if(e.keyCode == 27){
+      remove_helper_text();      
+      }
   });
 
-  $(".helper_icon").click(function(){
-    var node = document.createElement("div");
-    var textnode = document.createTextNode("TEXT");
-    node.appendChild(textnode);
-    node.className = "helper_text";
-    document.getElementsByTagName("body")[0].appendChild(node);
+  $(".description_link").on ( 'click', function(e){
+    var helper_text = $(this).attr('data-description');
+    show_description(helper_text);
+
+  });
+
+  $(".helper_text_close_button").on ( 'click', function(){
+    remove_helper_text();
   });
 
   $(".simple_with_drop").sortable({
@@ -33,7 +31,8 @@ $(document).ready(function() {
       if (li_item_data_type === target_li_data_type) {
         right_place_animation(ui_item, container_element, container_element_bg_color, h2color);
       } else if (li_item_data_type !== target_li_data_type && target_li_data_type !== "Questions") {
-        wrong_place_animation(container_element, container_element_bg_color, h2color, ui_item );
+        var helper_text = ui_item.find('span.helper').attr('data-type');
+        show_description(helper_text);
         return false;
       } else {
         return false;
@@ -55,25 +54,16 @@ $(document).ready(function() {
       });
     });
   };
-  wrong_place_animation = function(container_element, container_element_bg_color, h2color, ui_item) {
-    $(container_element).animate({
-      color: h2color,
-      backgroundColor: "#FF6666"
-    }, 10, function() {
-      $(container_element).animate({
-        color: h2color,
-        backgroundColor: container_element_bg_color,
-      });
-      show_description(ui_item);
-    });
+
+  show_description = function(helper_text) {
+    $(".helper_text p").remove();
+
+    $(".helper_text").prepend("<p>" + helper_text + "</p>");
+    $(".helper_text").css('visibility', 'visible');
   };
 
-  show_description = function(ui_item) {
-    var helper_text = $.trim(ui_item.find('span.helper').text());
-    $("body").append("<div class='helper_text'>" + helper_text + "</div>");
-  };
-
-  remove_description = function(){
-    $(".helper_text").remove().delay(1000);
+  remove_helper_text = function(){
+    $("helper_text p").remove();
+    $(".helper_text").css('visibility', 'hidden');
   };
 });

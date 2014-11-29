@@ -5,18 +5,49 @@ body{
 }
 
 .helper_text{
+  visibility: hidden;
   position: absolute;
   margin: auto;
+  font-size: 26px;
   padding-top:20px;
   padding-bottom: 20px;
   z-index: 10;
   background-color: #FF6666;
   text-align: center;
   color: white;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0; left: 0; right: 0;
   width: 50%;
-  height: 50%;
+  height: auto;
+  box-shadow: 1px 1px 1px #888888;
+}
 
+.helper_text p{
+  padding-left: 2em;
+  padding-right: 2em;  
+}
+
+.helper_text_close_button{
+  font-size: 20px;
+  color: #F0F0F0;
+  border: 2px solid #F0F0F0;
+  top: 2em;  
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-decoration: none;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  display: inline-block;
+}
+
+.helper_text_close_button:visited{
+  color: #F0F0F0;  
+}
+
+.helper_text_close_button:hover{
+  color: #F0F0F0;
+  border-color: #F0F0F0;
 }
 
 body.dragging, body.dragging * {
@@ -112,7 +143,7 @@ ol{
 }
 
 .helper_icon{
-  height: 20px;
+  height: 1.5em;
   float: right;
   cursor: pointer;
  }
@@ -158,7 +189,7 @@ ol{
   padding-bottom: 1em;
   padding-right: 1em;
   padding-left: 1em;
-  width: 5vw;
+  width: 6vw;
   font-size: 9px;
   text-align: center;
 

@@ -8,7 +8,9 @@
           %li{ data: {type: "#{i[:type]}"}, class: "item #{cycle('red', 'blue', 'green', 'orange', 'purple')}"}
             = i[:name]
             %span.helper{data: {type: "#{i[:description]}"}}
-              %img.helper_icon{src: "images/question_mark.png"}
+              - helper_text = i[:description]
+              %a{href: "#", class: "description_link", data: { description: helper_text }}
+                %img.helper_icon{ src: "images/question_mark.png"}
   .right_container
     .box_container
       .left_box
@@ -31,3 +33,8 @@
           %h2
             Style
           %ol.simple_with_no_drag{data: {type: "Style"}}
+
+.helper_text
+  %a{ href: "#", class: "helper_text_close_button"}
+    Got It!
+  
