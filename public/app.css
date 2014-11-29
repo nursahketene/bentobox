@@ -59,9 +59,9 @@ body.dragging, body.dragging * {
 }
 
 h2{
+  text-align: center;
   margin-top: 0;
   padding-top: 2vh;
-  padding-left: 2vw;
   margin-bottom: 0;
 }
 

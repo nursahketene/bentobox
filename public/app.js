@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var right_place_animation, wrong_place_animation, show_description;
+  
 
   $(document).keyup(function(e){
     if(e.keyCode == 27){
@@ -30,6 +31,7 @@ $(document).ready(function() {
       ui_item = ui.item;
       if (li_item_data_type === target_li_data_type) {
         right_place_animation(ui_item, container_element, container_element_bg_color, h2color);
+        remaining_questions_counters();
       } else if (li_item_data_type !== target_li_data_type && target_li_data_type !== "Questions") {
         var helper_text = ui_item.find('span.helper').attr('data-type');
         show_description(helper_text);
@@ -65,5 +67,14 @@ $(document).ready(function() {
   remove_helper_text = function(){
     $("helper_text p").remove();
     $(".helper_text").css('visibility', 'hidden');
+  };
+
+  remaining_questions_counters = function(){
+    var num_el = $(".simple_with_drop li").size();    
+    if (num_el == 0){
+      var helper_text = "Congradulations, You have finished this test. If you want to take test again just refresh the page. If you want to stay in the page just click 'Got It!'";
+      $(".helper_text").css("background-color", " #90C590");
+      show_description(helper_text);
+    };
   };
 });
