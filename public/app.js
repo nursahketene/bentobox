@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  var right_place_animation, wrong_place_animation, show_description;
-  
 
   $(document).keyup(function(e){
     if(e.keyCode == 27){
