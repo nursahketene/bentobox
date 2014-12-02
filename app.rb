@@ -28,7 +28,7 @@ get "/" do
       description: "SASS is an advanced CSS."},
     { name: "ERB", 
       type: "Style", 
-      description: "ERB stands for 'Embeded Ruby' and it is witin the view files."},
+      description: "ERB or 'Embeded Ruby' ERB is a convenient practice of embedding Ruby inside a front-end code document like HTML."},
     { name: "Apache", 
       type: "Infrastructure", 
       description: "Apache serves the web pages."},
