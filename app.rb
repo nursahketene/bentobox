@@ -40,7 +40,7 @@ get "/" do
       description: "Linux is an open source operating system used by millions to host web sites."},
     { name: "MySQL", 
       type: "Storage", 
-      description: "MySQL is used for saving information in relational databse tables."},
+      description: "MySQL is used for saving information in relational database tables."},
     { name: "SQLite", 
       type: "Storage", 
       description: "SQLite is used for saving information in relational databse tables."},
